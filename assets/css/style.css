@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  background: royalblue;
+  font-family: Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 490px;
+  overflow: hidden;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: white;
+}
+
+.box .btn-history {
+  display: block;
+  text-align: right;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.box .input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.box .input {
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding: 0 10px;
+  font-weight: 500;
+  color: #333;
+  background: #fff;
+}
+
+.box .input-big {
+  font-size: 2.3rem;
+}
+
+.box .input-medium {
+  font-size: 1.6rem;
+}
+
+.box .button-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box .button-wrapper .btn {
+  position: relative;
+  width: 22%;
+  padding: 10px;
+  background: #f4f7fe;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 3px;
+  transition: 0.1s ease-in;
+}
+
+.box .button-wrapper .btn-clear {
+  background: red;
+  color: #fff;
+}
+
+.box .button-wrapper .btn-value:hover {
+  background: royalblue;
+  color: #fff;
+}
+
+.box .button-wrapper .btn-equal {
+  width: 46%;
+  background: royalblue;
+  color: #fff;
+}
+
+.modal {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: #fff;
+  padding: 30px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.1);
+}
+
+.modal.active {
+  top: 50%;
+}
+
+.modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal .modal-header .modal-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.modal .modal-header .btn-close {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-del-history {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: red;
+  color: #fff;
+  cursor: pointer;
+}
+
+.history-container {
+  position: relative;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+.history-container .list {
+  position: relative;
+  width: 100%;
+  margin: 5px 0;
+  padding: 15px 20px;
+  background: #f4f7fe;
+}
+
+.history-container .list span {
+  display: block;
+  text-align: right;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* for mobile screen */
+@media screen and (max-width: 768px) {
+  
+  .container,
+  .modal {
+    width: 90%;
+  }
+  
+}

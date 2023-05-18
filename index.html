@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.2/sweetalert2.min.css">
+  <title>Calculator Localstorage</title>
+</head>
+<body>
+  
+  <div class="container">
+    
+    <!-- box start -->
+    <div class="box">
+      
+      <!-- btn history start -->
+      <i class="fa-solid fa-ellipsis-v btn-history btn-modal" data-modal="modalHistory"></i>
+      <!-- btn history end -->
+      
+      <!-- input wrapper start -->
+      <div class="input-wrapper">
+        <input type="text" class="input input-big" readonly>
+        <input type="text" class="input input-medium" readonly>
+      </div>
+      <!-- input wrapper end -->
+      
+      <!-- button wrapper start -->
+      <div class="button-wrapper">
+        <button class="btn btn-clear">C</button>
+        <button class="btn btn-delete">
+          <i class="fa-solid fa-delete-left"></i>
+        </button>
+        <button class="btn btn-value" data-value="%">%</button>
+        <button class="btn btn-value" data-value="/">÷</button>
+        <button class="btn btn-value" data-value="7">7</button>
+        <button class="btn btn-value" data-value="8">8</button>
+        <button class="btn btn-value" data-value="9">9</button>
+        <button class="btn btn-value" data-value="*">×</button>
+        <button class="btn btn-value" data-value="4">4</button>
+        <button class="btn btn-value" data-value="5">5</button>
+        <button class="btn btn-value" data-value="6">6</button>
+        <button class="btn btn-value" data-value="-">-</button>
+        <button class="btn btn-value" data-value="1">1</button>
+        <button class="btn btn-value" data-value="2">2</button>
+        <button class="btn btn-value" data-value="3">3</button>
+        <button class="btn btn-value" data-value="+">+</button>
+        <button class="btn btn-value" data-value="0">0</button>
+        <button class="btn btn-value" data-value=".">.</button>
+        <button class="btn btn-equal">=</button>
+      </div>
+      <!-- button wrapper end -->
+      
+    </div>
+    <!-- box end -->
+    
+    <!-- modal history start -->
+    <div class="modal" data-modal="modalHistory">
+      <div class="modal-header">
+        <h3 class="modal-title">Modal History</h3>
+        <span class="btn-close">×</span>
+      </div>
+      <div class="modal-body">
+        <i class="fa-solid fa-trash-alt btn-del-history"></i>
+        <div class="history-container"></div>
+      </div>
+    </div>
+    <!-- modal history end -->
+    
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.2/sweetalert2.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
