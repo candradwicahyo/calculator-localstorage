@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const historyContainer = document.querySelector('.history-container');
   const inputResult = document.querySelector('.input-big');
   const input = document.querySelector('.input-medium');
+  
   const buttonValue = document.querySelectorAll('.btn-value');
   buttonValue.forEach(button => {
     button.addEventListener('click', function() {
@@ -35,7 +36,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const data = { value: value, result: eval(value) };
     tasks.unshift(data);
     setLocalstorage('calculator', tasks);
-    showUI(data);
     loadData();
   }
   
